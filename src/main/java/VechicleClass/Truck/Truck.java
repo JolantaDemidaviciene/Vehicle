@@ -4,7 +4,7 @@ import VechicleClass.VechicleAbstract;
 
 import java.util.Date;
 
-public class TruckClass extends VechicleAbstract {
+public class Truck extends VechicleAbstract {
 
     private int Id;
     private String Brand;
@@ -16,7 +16,7 @@ public class TruckClass extends VechicleAbstract {
     private Double TaxRate;
     private String NumberPlate;
 
-    public TruckClass(int Id,String Brand,String Model,Date FirstRegistrationDate,int HorsePower,Double Price,int Seats,Double TaxRate,String NumberPlate){
+    public Truck(int Id, String Brand, String Model, Date FirstRegistrationDate, int HorsePower, Double Price, int Seats, Double TaxRate, String NumberPlate){
         this.Id = Id;
         this.Brand = Brand;
         this.Model = Model;
