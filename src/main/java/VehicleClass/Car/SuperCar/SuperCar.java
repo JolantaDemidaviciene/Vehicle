@@ -1,6 +1,6 @@
-package VechicleClass.Car.SuperCar;
+package VehicleClass.Car.SuperCar;
 
-import VechicleClass.Car.Car;
+import VehicleClass.Car.Car;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class SuperCar extends Car {
     }
 
    public double LuxuryTax(){
-        return double LuxuryTax =  this.getPrice()*4;
+        return this.getPrice()*4;
    }
 
    @Override

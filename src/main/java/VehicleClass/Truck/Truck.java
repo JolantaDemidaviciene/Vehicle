@@ -1,10 +1,10 @@
-package VechicleClass.Truck;
+package VehicleClass.Truck;
 
-import VechicleClass.VechicleAbstract;
+import VehicleClass.VehicleAbstract;
 
 import java.util.Date;
 
-public class Truck extends VechicleAbstract {
+public class Truck extends VehicleAbstract {
 
     private int Id;
     private String Brand;
@@ -27,7 +27,7 @@ public class Truck extends VechicleAbstract {
         this.TaxRate = TaxRate;
         this.NumberPlate = NumberPlate;
     }
-
+    @Override
     public  void CalculateTax(){
         double Tax =  this.TaxRate * this.Price + (this.Seats * 500);
     }

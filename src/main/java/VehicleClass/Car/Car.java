@@ -1,10 +1,10 @@
-package VechicleClass.Car;
+package VehicleClass.Car;
 
-import VechicleClass.VechicleAbstract;
+import VehicleClass.VehicleAbstract;
 
 import java.util.Date;
 
-public class Car extends VechicleAbstract {
+public class Car extends VehicleAbstract {
     private int Id;
     private String Brand;
     private String Model;
@@ -69,7 +69,7 @@ public class Car extends VechicleAbstract {
         Price = price;
     }
     //#endregion
-
+    @Override
     public  void CalculateTax(){
        double Tax =  this.TaxRate * this.Price + (this.Seats * 500);
     }
