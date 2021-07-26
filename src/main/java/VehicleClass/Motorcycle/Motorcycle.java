@@ -2,30 +2,93 @@ package VehicleClass.Motorcycle;
 
 import VehicleClass.VehicleAbstract;
 
+import java.time.LocalDate;
 import java.util.Date;
+
+import static Helpers.Helpers.FunctionId;
 
 public class Motorcycle extends VehicleAbstract {
     private int Id;
     private String Brand;
     private String Model;
-    private Date FirstRegistrationDate;
+    private LocalDate FirstRegistrationDate;
     private int HorsePower;
     private Double Price;
     private int Seats;
-    private Double TaxRate;
+    private Double TaxRate = 0.5;
     private String NumberPlate;
 
-    public Motorcycle(int Id, String Brand, String Model, Date FirstRegistrationDate, int HorsePower, Double Price, int Seats, Double TaxRate, String NumberPlate){
-        this.Id = Id;
+    public Motorcycle(String Brand, String Model, LocalDate FirstRegistrationDate, int HorsePower, Double Price, int Seats, String NumberPlate){
+        this.Id = FunctionId();
         this.Brand = Brand;
         this.Model = Model;
         this.FirstRegistrationDate = FirstRegistrationDate;
         this.HorsePower = HorsePower;
         this.Price = Price;
         this.Seats = Seats;
-        this.TaxRate = TaxRate;
         this.NumberPlate = NumberPlate;
     }
+
+    public int getId() {
+        return Id;
+    }
+
+    public String getBrand() {
+        return Brand;
+    }
+
+    public void setBrand(String brand) {
+        Brand = brand;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public void setModel(String model) {
+        Model = model;
+    }
+
+    public LocalDate getFirstRegistrationDate() {
+        return FirstRegistrationDate;
+    }
+
+    public void setFirstRegistrationDate(LocalDate firstRegistrationDate) {
+        FirstRegistrationDate = firstRegistrationDate;
+    }
+
+    public int getHorsePower() {
+        return HorsePower;
+    }
+
+    public void setHorsePower(int horsePower) {
+        HorsePower = horsePower;
+    }
+
+    public Double getPrice() {
+        return Price;
+    }
+
+    public void setPrice(Double price) {
+        Price = price;
+    }
+
+    public int getSeats() {
+        return Seats;
+    }
+
+    public void setSeats(int seats) {
+        Seats = seats;
+    }
+
+    public String getNumberPlate() {
+        return NumberPlate;
+    }
+
+    public void setNumberPlate(String numberPlate) {
+        NumberPlate = numberPlate;
+    }
+
     @Override
     public  void CalculateTax(){
         double Tax =  this.TaxRate * this.Price + (this.Seats * 500);

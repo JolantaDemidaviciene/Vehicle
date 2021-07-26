@@ -2,30 +2,36 @@ package VehicleClass.Car;
 
 import VehicleClass.VehicleAbstract;
 
+import java.text.Format;
+import java.time.LocalDate;
 import java.util.Date;
+
+import static Helpers.Helpers.FunctionId;
 
 public class Car extends VehicleAbstract {
     private int Id;
     private String Brand;
     private String Model;
-    private Date FirstRegistrationDate;
+    private LocalDate FirstRegistrationDate;
     private int HorsePower;
     private Double Price;
     private int Seats;
-    private Double TaxRate;
+    private Double TaxRate = 1.00;
     private String NumberPlate;
 
-    public Car(int Id, String Brand, String Model, Date FirstRegistrationDate, int HorsePower, Double Price, int Seats, Double TaxRate, String NumberPlate){
-        this.Id = Id;
+    public Car(String Brand, String Model, LocalDate FirstRegistrationDate, int HorsePower, Double Price, int Seats,  String NumberPlate){
+        this.Id = FunctionId();
         this.Brand = Brand;
         this.Model = Model;
         this.FirstRegistrationDate = FirstRegistrationDate;
         this.HorsePower = HorsePower;
         this.Price = Price;
         this.Seats = Seats;
-        this.TaxRate = TaxRate;
         this.NumberPlate = NumberPlate;
     }
+
+
+
 
     //#region get ir set
 
@@ -35,6 +41,38 @@ public class Car extends VehicleAbstract {
 
     public int getId() {
         return Id;
+    }
+
+    public LocalDate getFirstRegistrationDate() {
+        return FirstRegistrationDate;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public void setBrand(String brand) {
+        Brand = brand;
+    }
+
+    public void setModel(String model) {
+        Model = model;
+    }
+
+    public void setFirstRegistrationDate(LocalDate firstRegistrationDate) {
+        FirstRegistrationDate = firstRegistrationDate;
+    }
+
+    public void setHorsePower(int horsePower) {
+        HorsePower = horsePower;
+    }
+
+    public void setSeats(int seats) {
+        Seats = seats;
+    }
+
+    public void setNumberPlate(String numberPlate) {
+        NumberPlate = numberPlate;
     }
 
     public Double getTaxRate() {
@@ -49,10 +87,6 @@ public class Car extends VehicleAbstract {
         return Model;
     }
 
-    public Date getFirstRegistrationDate() {
-        return FirstRegistrationDate;
-    }
-
     public int getHorsePower() {
         return HorsePower;
     }
@@ -62,7 +96,7 @@ public class Car extends VehicleAbstract {
     }
 
     public String getNumberPlate() {
-        return NumberPlate;
+        return this.NumberPlate;
     }
 
     public void setPrice(Double price) {

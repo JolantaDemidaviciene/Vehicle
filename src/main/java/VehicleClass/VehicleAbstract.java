@@ -18,5 +18,4 @@ public abstract class VehicleAbstract {
 
 
     public abstract void CalculateTax();
-
 }
